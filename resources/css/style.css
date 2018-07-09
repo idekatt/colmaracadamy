@@ -1,0 +1,204 @@
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+h2  {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+h3  {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Header section */
+
+.header {
+  background-color: white;
+  border-bottom: 1px solid black;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  z-index: 1;
+  top: 0rem;
+  width: 100%;
+}
+
+.header .content  {
+  justify-content: space-between;
+  padding: 0 1.5rem
+}
+
+.content  {
+  display: flex;
+  flex-direction: row;
+  width: 960px;
+
+}
+
+.logoArea {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /*height: 2rem;*/
+}
+
+.companyName  {
+  font-size: 1rem;
+}
+
+.companyName span:nth-child(1) {
+  font-weight: bold;
+}
+
+.linkArea {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.linkArea ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.linkArea ul li {
+  display: flex;
+  margin-left: 1rem;
+}
+
+.midAndFooter {
+  position: relative;
+  top: 4rem;
+}
+
+@media only screen and (min-width: 368px) {
+  .menuMobile  {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 368px) {
+  .logoArea,
+  .linkArea  {
+    display: none;
+  }
+
+  .menuMobile {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .menuMobile ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+
+/*Mid section*/
+
+.mid  {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.row  {
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row .content {
+  background-color: red;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  padding: 2rem 0;
+}
+
+.banner {
+  background-color: yellow;
+}
+
+.secondBlock  {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%
+}
+
+.button {
+  width: 10rem;
+  background-color: green;
+  margin-top: 1.5rem;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.information {
+  background-color: grey;
+}
+
+.startLearning  {
+  background-color: green;
+}
+
+.firstBlock {
+  width: 60%;
+  margin: 0 1.5rem;
+}
+
+.firstBlock img {
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (max-width: 368px) {
+  .row .content  {
+    flex-direction: column;
+    padding: 0
+  }
+
+  .firstBlock {
+    width: 100%;
+    margin: 0;
+  }
+
+  .secondBlock  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 2rem 1rem;
+  }
+
+}
+
+
+/*Footer section*/
+
+.footer {
+  background-color: blue;
+  height: 1rem;
+}
