@@ -149,10 +149,6 @@ h5  {
   padding: 2rem 0;
 }
 
-.banner {
-  background-color: yellow;
-}
-
 .secondBlock  {
   display: flex;
   flex-direction: column;
@@ -171,16 +167,9 @@ h5  {
   font-weight: bold;
 }
 
-.information {
-  background-color: grey;
-}
-
-.information .secondBlock {
+.information .secondBlock,
+.thesis .secondBlock {
   justify-content: flex-start;
-}
-
-.startLearning  {
-  background-color: green;
 }
 
 .firstBlock {
@@ -219,6 +208,7 @@ h5  {
   flex-direction: column;
   justify-content: space-around;
   margin: 1rem;
+  width: 65%;
 }
 
 .agendaItem a {
@@ -257,6 +247,12 @@ h5  {
     flex-direction: column;
   }
 
+  .agendaItem .text{
+    width: auto;
+    padding: 1rem 1rem 1rem 1rem;
+    margin: 0
+  }
+
   .agendaImage  {
     width: 100%
   }
@@ -265,7 +261,11 @@ h5  {
     display: none;
   }
 
-
+  .thesis .firstBlock .text h3,
+  .thesis .firstBlock .text p,
+  .thesis .secondBlock {
+    display: none;
+  }
 
 }
 
