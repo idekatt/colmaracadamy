@@ -96,13 +96,13 @@ h5  {
   /*top: 4rem;*/
 }
 
-@media only screen and (min-width: 368px) {
+@media only screen and (min-width: 414px) {
   .menuMobile  {
     display: none;
   }
 }
 
-@media only screen and (max-width: 368px) {
+@media only screen and (max-width: 414px) {
   .logoArea,
   .linkArea  {
     display: none;
@@ -226,7 +226,7 @@ h5  {
   text-decoration: none;
 }
 
-@media only screen and (max-width: 368px) {
+@media only screen and (max-width: 414px) {
   .row .content  {
     flex-direction: column;
     padding: 0
@@ -269,7 +269,7 @@ h5  {
 
 }
 
-@media only screen and (min-width: 368px) {
+@media only screen and (min-width: 414px) {
   .agendaImage .mobile {
     display: none;
   }
