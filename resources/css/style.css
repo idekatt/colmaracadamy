@@ -46,6 +46,18 @@ a:hover {
   color: #f60;
 }
 
+/*Fix for IEedge stretch issue*/
+img,
+.agendaItem,
+.video,
+.row,
+.course,
+.innerRow,
+.courseImage,
+.midAndFooter {
+  flex-shrink: 0;
+}
+
 /* Header section */
 
 .header {
@@ -153,7 +165,6 @@ a:hover {
 
 .midAndFooter {
   position: relative;
-  /*top: 4rem;*/
 }
 
 .mid  {
@@ -183,7 +194,8 @@ a:hover {
   flex-direction: column;
   justify-content: center;
   width: 40%;
-  margin: 0 1.5rem 0 0;
+  padding: : 0 1.5rem 0 0;
+  box-sizing: border-box;
 }
 
 .btn {
@@ -200,14 +212,19 @@ a:hover {
 }
 
 .btn:hover {
-  background-color: #0090e3c4;
+  background-color: #44bbff;
+  cursor: pointer;
+}
+
+.btn:active {
+  background-color: #f60;
   cursor: pointer;
 }
 
 .information .secondBlock,
 .thesis .secondBlock {
   justify-content: flex-start;
-  margin: 0 1.5rem 0 0;
+  padding: 0 1.5rem 0 0;
 }
 
 .information .content,
@@ -217,9 +234,10 @@ a:hover {
 
 .firstBlock {
   width: 60%;
-  margin: 0 1.5rem;
+  padding: 0 1.5rem;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
 }
 
 .firstBlock img {
@@ -254,8 +272,9 @@ a:hover {
 .agendaItem .text {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  margin: 1rem;
+  justify-content: space-between;
+  padding: 0 0 0 1rem;
+  box-sizing: border-box;
   width: 65%;
 }
 
@@ -303,7 +322,11 @@ a:hover {
 }
 
 .course:hover {
-  background-color: #0090e3c4;
+  background-color: #44bbff;
+}
+
+.course:active {
+  background-color: #f60;
 }
 
 .courseImage img  {
@@ -324,6 +347,15 @@ a:hover {
 }
 
 @media only screen and (max-width: 414px) {
+
+  .row {
+    border-bottom: 1px solid #cce9f9;
+  }
+
+  .row:nth-last-child(1) {
+    border-bottom: 0px;
+  }
+
   .row .content  {
     flex-direction: column;
     padding: 0
@@ -331,7 +363,7 @@ a:hover {
 
   .firstBlock {
     width: 100%;
-    margin: 0;
+    padding: 0;
   }
 
   .secondBlock  {
@@ -353,13 +385,17 @@ a:hover {
 
   .agendaItem {
     flex-direction: column;
-    background-color: #ebebeb;
+    margin: 0;
   }
 
   .agendaItem .text{
     width: auto;
-    padding: 1rem 1rem 1rem 1rem;
-    margin: 0
+    padding: 1rem 1rem 0 0;
+    margin: 0;
+  }
+
+  .agendaItem p {
+    margin: 1rem 0;
   }
 
   .agendaImage  {
@@ -376,6 +412,10 @@ a:hover {
   .course .text p,
   .course .text br {
     display: none;
+  }
+
+  .thesis .content {
+    background-color: white;
   }
 
   .course{
@@ -401,6 +441,18 @@ a:hover {
 @media only screen and (min-width: 415px) {
   .agendaImage .mobile {
     display: none;
+  }
+}
+
+/*Accomodate until iPhone X landscape*/
+@media only screen and (min-width: 415px) and (max-width: 813px)  {
+  .firstBlock,
+  .secondBlock {
+      width: 50%
+  }
+
+  .courses {
+    padding: 0 1.5rem;
   }
 }
 
