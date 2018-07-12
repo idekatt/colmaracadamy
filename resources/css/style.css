@@ -1,5 +1,6 @@
 html {
-  font-family: "Roboto", sans-serif;
+  /*font-family: "Roboto", sans-serif;*/
+  font-family: 'Comfortaa', cursive;
   font-size: 16px;
 }
 
@@ -39,6 +40,10 @@ h5  {
 
 a {
   color: #0090e3;
+}
+
+a:hover {
+  color: #f60;
 }
 
 /* Header section */
@@ -100,7 +105,7 @@ a {
 
 .linkArea a:hover {
   font-weight: bold;
-  color: black;
+  color: #0090e3;
 }
 
 .linkArea ul {
@@ -113,10 +118,7 @@ a {
   margin-left: 1rem;
 }
 
-.midAndFooter {
-  position: relative;
-  /*top: 4rem;*/
-}
+
 
 @media only screen and (min-width: 415px) {
   .menuMobile  {
@@ -149,6 +151,11 @@ a {
 
 /*Mid section*/
 
+.midAndFooter {
+  position: relative;
+  /*top: 4rem;*/
+}
+
 .mid  {
   display: flex;
   flex-direction: column;
@@ -175,7 +182,8 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 40%
+  width: 40%;
+  margin: 0 1.5rem 0 0;
 }
 
 .btn {
@@ -193,6 +201,7 @@ a {
 
 .btn:hover {
   background-color: #0090e3c4;
+  cursor: pointer;
 }
 
 .information .secondBlock,
@@ -227,6 +236,11 @@ a {
   flex-direction: row;
   padding: 1rem;
   background-color: white;
+  margin: 0 0 1rem 0;
+}
+
+.agendaItem:nth-last-child(1) {
+  margin: 0;
 }
 
 .agendaImage  {
@@ -286,6 +300,10 @@ a {
   flex-direction: column;
   background-color: #0090e3;
   margin: 0 0 1rem 0;
+}
+
+.course:hover {
+  background-color: #0090e3c4;
 }
 
 .courseImage img  {
@@ -389,9 +407,15 @@ a {
 
 /*Footer section*/
 
-.footer .content  {
+footer .row {
+  background-color: #cce9f9;
+  border-top: 1px solid white;
+}
+
+footer .row .content  {
   padding-top: 1rem;
   font-size: 0.8rem;
+  background-color: #cce9f9;
 }
 
 .rights {
@@ -403,11 +427,13 @@ a {
 }
 
 @media only screen and (max-width: 415px) {
-  .footerLinks, .rights {
+  .footerLinks,
+  .rights,
+  .social {
     margin: 0 0 1rem 0;
   }
 
-  .footer .row .content {
+  footer .row .content {
     align-items: center;
   }
 }
